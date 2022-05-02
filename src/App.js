@@ -4,17 +4,17 @@ import { BrowserRouter, Route, Routes, Switch } from "react-router-dom";
 import { ToastContainer } from 'react-toastify';
 import Navbar from './components/navbar';
 import form from './components/form';
-import table from './components/table';
+import Table from './components/table';
 
 function App() {
   return (
     <div className="App">
       <ToastContainer />
       <BrowserRouter>
-        <Navbar />
+        {/* <Navbar /> */}
         <Switch>
           <Route path="/" exact component={form} />
-          <Route path="/show" exact component={table} />
+          <Route path="/show" exact component={Table} />
         </Switch>
       </BrowserRouter>
     </div>
