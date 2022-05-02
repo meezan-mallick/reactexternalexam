@@ -20,10 +20,8 @@ const Table = () => {
                     </tr>
                 </thead>
                 <tbody>
-        
                     {users.map((user) => (
                         <tr >
-                            
                             <td>{user.firstName}</td>
                             <td>{user.lastName}</td>
                             <td>{user.email}</td>

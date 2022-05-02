@@ -106,10 +106,6 @@ const Form = () => {
 
                         </div>
 
-
-                        {/* <div className="form-group p-2">
-                            <input className="form-control" type="text" placeholder="Family Member" value={familyMembers} onChange={e => setFamilyMembers(e.target.value)} />
-                        </div> */}
                         <h6>Add Family Member</h6>
 
                         {
@@ -150,8 +146,6 @@ const Form = () => {
             </div>
 
             <Table />
-
-
         </div>
     )
 }
