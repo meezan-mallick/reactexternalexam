@@ -14,7 +14,6 @@ const Form = () => {
     const [familyMembers, setFamilyMembers] = useState("");
 
 
-    const handleClick = () => setMaritalStatus(!maritalStatus)
     //validations
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -22,7 +21,13 @@ const Form = () => {
         if (!firstName || !lastName || !email) {
             return toast.warning("please fill all the fields");
         }
-
+        var letters = /^[A-Za-z]+$/;
+        if (!firstName.match(letters)) {
+            return toast.warning("first name should be alphabets only");;
+        }
+        if (!lastName.match(letters)) {
+            return toast.warning("last name should be alphabets only");;
+        }
         else {
 
             console.log(firstName)
@@ -64,9 +69,9 @@ const Form = () => {
 
                         <div className="form-check p-2">
                             <input classAName="form-check-input" type="checkbox" checked={maritalStatus} onChange={e => setMaritalStatus(e.target.checked)} id="flexCheckDefault" />
-                                <label className="form-check-label " htmlFor="flexCheckDefault">
-                                    Marital Status
-                                </label>                                    
+                            <label className="form-check-label " htmlFor="flexCheckDefault">
+                                Marital Status
+                            </label>
                         </div>
 
                         <div className="form-group p-2">
