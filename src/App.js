@@ -9,15 +9,15 @@ import table from './components/table';
 function App() {
   return (
     <div className="App">
-    <ToastContainer />
-    <BrowserRouter>
-    <Navbar />
+      <ToastContainer />
+      <BrowserRouter>
+        <Navbar />
         <Switch>
           <Route path="/" exact component={form} />
           <Route path="/show" exact component={table} />
         </Switch>
       </BrowserRouter>
-  </div>
+    </div>
   );
 }
 
